@@ -1,5 +1,5 @@
 run-keycloak:
-	cd keycloak && docker build -t keycloak . && docker run -p 8443:8443 -p 9000:9000 --rm -it keycloak
+	cd keycloak && docker build -t keycloak . && docker run -p 8443:8443 -p 9000:9000 -p 8080:8080 --rm -it keycloak
 
 stop-keycloak:
 	docker compose -f keycloak/docker-compose.yml down
