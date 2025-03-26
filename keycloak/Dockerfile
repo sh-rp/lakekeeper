@@ -17,6 +17,6 @@ COPY --from=builder /opt/keycloak/ /opt/keycloak/
 
 # change these values to point to a running postgres instance
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
-CMD ["start", "--hostname-strict", "false", "--http-enabled", "true", "--proxy-headers", "forwarded", "--hostname", "https://keycloak-6zwv8.ondigitalocean.app"]
+CMD ["start", "--hostname-strict", "false", "--http-enabled", "true", "--proxy-headers", "forwarded", "--hostname", "https://keycloak-88pae.ondigitalocean.app"]
 
 EXPOSE 8080
