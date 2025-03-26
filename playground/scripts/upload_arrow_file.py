@@ -9,7 +9,7 @@ import pyiceberg.typedef
 
 
 ENDPOINT = "https://lakekeeper-f6mi9.ondigitalocean.app"
-WAREHOUSE = "dlt-warehouse-2"
+WAREHOUSE = "dlt-ci-warehouse"
 
 
 if __name__ == "__main__":
@@ -87,14 +87,6 @@ if __name__ == "__main__":
         "rows have tip-per-mile."
     )
 
-    print("Let's drop the table and demonstrate the location option")
-
-    catalog.drop_table("default.taxi_dataset")
-
-    print("Catalog table default.taxi_dataset dropped")
-
-    current_timestamp = datetime.datetime.now().strftime("%Y%m%d_%H_%M_%S")
-    new_location = f"s3://demo/new_location/{current_timestamp}"
 
     # print(f"Create the table with the location: {new_location}")
 

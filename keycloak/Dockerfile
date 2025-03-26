@@ -17,3 +17,6 @@ COPY --from=builder /opt/keycloak/ /opt/keycloak/
 
 # change these values to point to a running postgres instance
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
+CMD ["start", "--hostname-strict", "false"]
+
+EXPOSE 8443
