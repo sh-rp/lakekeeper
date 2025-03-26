@@ -22,5 +22,3 @@ ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
 CMD ["start", "--hostname-strict", "false"]
 
 EXPOSE 8443
-EXPOSE 9000
-EXPOSE 8080
